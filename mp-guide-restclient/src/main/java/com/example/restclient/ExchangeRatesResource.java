@@ -11,17 +11,16 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @ApplicationScoped
-@Path("/comics")
+@Path("/exchange-rates")
 @Produces(MediaType.APPLICATION_JSON)
-public class ComicsController {
+public class ExchangeRatesResource {
 
     @Inject
     @RestClient
-    private ComicsService comicsService;
+    private ExchangeRatesServiceClient ratesServiceClient;
 
     @GET
-    public Response getComics() {
-        return Response.ok(comicsService.getComics()).build();
+    public Response getExchangeRates() {
+        return Response.ok(ratesServiceClient.getExchangeRates()).build();
     }
-
 }

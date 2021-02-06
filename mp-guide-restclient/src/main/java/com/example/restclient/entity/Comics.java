@@ -1,4 +1,4 @@
-package com.example.restclient;
+package com.example.restclient.entity;
 
 public class Comics {
     private String name;

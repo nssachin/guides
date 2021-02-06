@@ -16,7 +16,9 @@ public class RestClientApplication extends Application {
         Set<Class<?>> classes = new HashSet<>();
 
         // resources
-        classes.add(ComicsController.class);
+        classes.add(ComicsResource.class);
+        classes.add(ExchangeRatesResource.class);
+        classes.add(ActivityResource.class);
 
         return classes;
     }
