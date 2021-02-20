@@ -1,5 +1,6 @@
 package com.example.restclient;
 
+import com.example.restclient.entity.Comics;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -21,7 +22,8 @@ public class ComicsResource {
 
     @GET
     public Response getComics() {
-        return Response.ok(comicsServiceClient.getComics()).build();
+        Comics comics = comicsServiceClient.getComics();
+        return Response.ok(comics).build();
     }
 
 }
